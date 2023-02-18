@@ -1,0 +1,23 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Destruction Simulator", "Ocean")
+    -- MAIN
+    local Main = Window:NewTab("Scripts")
+    local MainSection = Main:NewSection("Script List")
+
+
+    MainSection:NewButton("Inf Money", "MONEYYYYYY", function()
+        game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Coins", 480, 99999999)
+    end)
+
+    MainSection:NewToggle("Inf Level", "LEVELSSSSSS", function(state)
+        game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 10)
+    end)
+
+    MainSection:NewButton("More Features", ":D", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FadeRemix/RND-Games/main/DestructionSim.lua"))()
+    end)
+
+
+    --LOCAL PLAYER
+    local Player = Window:NewTab("Credits")
+    local PlayerSection = Player:NewSection("userz#9751")
